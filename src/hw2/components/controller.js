@@ -48,7 +48,7 @@ class Controller extends Component {
             let res = this.util.checkWord(word, this.props.answer);
             curGuess = store.getState().user.curGuess;
             let availableGuessLeft = MAXGUESS - curGuess;
-            this.props.sendMessage(res + "/" + this.props.length + " correct");
+            this.props.sendMessage(res + "/" + word.length + " correct");
             this.props.sendMessage("Guess (" + availableGuessLeft + " left)?");
             if (availableGuessLeft === 0) this.props.sendMessage("You lose. The answer is " + this.props.answer + ".");
 
